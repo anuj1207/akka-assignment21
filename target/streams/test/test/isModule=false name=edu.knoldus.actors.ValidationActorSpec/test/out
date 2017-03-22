@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mValidationActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA ValidationActor[0m[0m
+[0m[[0minfo[0m] [0m[32m- must successfully send req to purchase ref if item available[0m[0m
+[0m[[0minfo[0m] [0m[32mA ValidationActor[0m[0m
+[0m[[0minfo[0m] [0m[32m- must test ask await condition with true return[0m[0m
+[0m[[0minfo[0m] [0m[32m- must test ask await with false return [0m[0m

@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mPurchaseActorSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA purchaseActor [0m[0m
+[0m[[0minfo[0m] [0m[32m- must change state when receive a customer[0m[0m
+[0m[[0minfo[0m] [0m[32m- must return true when handset available[0m[0m
+[0m[[0minfo[0m] [0m[32m- must return false when invalid input[0m[0m
+[0m[[0minfo[0m] [0m[32m- must return false when handset not available[0m[0m

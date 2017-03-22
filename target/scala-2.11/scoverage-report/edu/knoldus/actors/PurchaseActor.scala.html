@@ -1,0 +1,663 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          edu/knoldus/actors/PurchaseActor.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package edu.knoldus.actors
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.{Actor, ActorLogging, ActorRef}
+</span>4 <span style=''>import edu.knoldus.actors.PurchaseActor.GetState
+</span>5 <span style=''>import edu.knoldus.models.{Checking, Customer}
+</span>6 <span style=''>
+</span>7 <span style=''>class PurchaseActor extends Actor with ActorLogging {
+</span>8 <span style=''>
+</span>9 <span style=''>  var handsetCounter = </span><span style='background: #AEF1AE'>3</span><span style=''>
+</span>10 <span style=''>
+</span>11 <span style=''>  override def receive = {
+</span>12 <span style=''>    case Checking if </span><span style='background: #AEF1AE'>handsetCounter &gt; 0</span><span style=''> =&gt;
+</span>13 <span style=''>      </span><span style='background: #AEF1AE'>log.info(s&quot;Purchase Actor:&gt;&gt;&gt;&gt; Item in stock  $handsetCounter&quot;)</span><span style=''>
+</span>14 <span style=''>      </span><span style='background: #AEF1AE'>sender ! true</span><span style=''>
+</span>15 <span style=''>
+</span>16 <span style=''>    case customer: Customer =&gt;
+</span>17 <span style=''>      </span><span style='background: #AEF1AE'>log.info(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Processing booking&quot;)</span><span style=''>
+</span>18 <span style=''>      </span><span style='background: #AEF1AE'>handsetCounter -= 1</span><span style=''>
+</span>19 <span style=''>      </span><span style='background: #AEF1AE'>log.info(s&quot;Purchase Actor:&gt;&gt;&gt;&gt; booked for ${customer.toString}&quot;)</span><span style=''>
+</span>20 <span style=''>
+</span>21 <span style=''>    case GetState(ref) =&gt; </span><span style='background: #AEF1AE'>ref ! handsetCounter</span><span style=''>
+</span>22 <span style=''>
+</span>23 <span style=''>    case _ =&gt;
+</span>24 <span style=''>      </span><span style='background: #AEF1AE'>log.info(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Out of stock&quot;)</span><span style=''>
+</span>25 <span style=''>      </span><span style='background: #AEF1AE'>sender ! false</span><span style=''>
+</span>26 <span style=''>  }
+</span>27 <span style=''>
+</span>28 <span style=''>}
+</span>29 <span style=''>
+</span>30 <span style=''>object PurchaseActor {
+</span>31 <span style=''>
+</span>32 <span style=''>  case class GetState(ref: ActorRef)
+</span>33 <span style=''>
+</span>34 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          253
+          -
+          254
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          3
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          281
+          -
+          281
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.actors.PurchaseActor.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          304
+          -
+          322
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.handsetCounter.&gt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          379
+          -
+          393
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.actors.PurchaseActor.handsetCounter
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.handsetCounter
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          393
+          -
+          394
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          332
+          -
+          395
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.log.info(scala.StringContext.apply(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Item in stock  &quot;, &quot;&quot;).s(PurchaseActor.this.handsetCounter))
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          343
+          -
+          379
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Purchase Actor:&gt;&gt;&gt;&gt; Item in stock  &quot;
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          341
+          -
+          394
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Item in stock  &quot;, &quot;&quot;).s(PurchaseActor.this.handsetCounter)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          402
+          -
+          408
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Actor.sender
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.sender()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          402
+          -
+          415
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          akka.this.actor.`package`.actorRef2Scala(PurchaseActor.this.sender()).!(true)(PurchaseActor.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          409
+          -
+          409
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          411
+          -
+          415
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          true
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          454
+          -
+          504
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.log.info(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Processing booking&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          511
+          -
+          530
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.actors.PurchaseActor.handsetCounter_=
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.handsetCounter_=(PurchaseActor.this.handsetCounter.-(1))
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          511
+          -
+          530
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.handsetCounter.-(1)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          581
+          -
+          598
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.toString
+        </td>
+        <td style="background: #AEF1AE">
+          customer.toString()
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          599
+          -
+          600
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          537
+          -
+          601
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.log.info(scala.StringContext.apply(&quot;Purchase Actor:&gt;&gt;&gt;&gt; booked for &quot;, &quot;&quot;).s(customer.toString()))
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          546
+          -
+          600
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;Purchase Actor:&gt;&gt;&gt;&gt; booked for &quot;, &quot;&quot;).s(customer.toString())
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          548
+          -
+          580
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Purchase Actor:&gt;&gt;&gt;&gt; booked for &quot;
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          635
+          -
+          649
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.actors.PurchaseActor.handsetCounter
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.handsetCounter
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          629
+          -
+          649
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          akka.this.actor.`package`.actorRef2Scala(ref).!(PurchaseActor.this.handsetCounter)(PurchaseActor.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          633
+          -
+          633
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          671
+          -
+          715
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.log.info(&quot;Purchase Actor:&gt;&gt;&gt;&gt; Out of stock&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          729
+          -
+          729
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          731
+          -
+          736
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          false
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          722
+          -
+          736
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          akka.this.actor.`package`.actorRef2Scala(PurchaseActor.this.sender()).!(false)(PurchaseActor.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          722
+          -
+          728
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Actor.sender
+        </td>
+        <td style="background: #AEF1AE">
+          PurchaseActor.this.sender()
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

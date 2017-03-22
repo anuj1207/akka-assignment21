@@ -1,0 +1,545 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          edu/knoldus/actors/ValidationActor.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package edu.knoldus.actors
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.{Actor, ActorLogging, ActorRef, Props}
+</span>4 <span style=''>import akka.pattern.ask
+</span>5 <span style=''>import akka.util.Timeout
+</span>6 <span style=''>import edu.knoldus.models.{Checking, Customer}
+</span>7 <span style=''>
+</span>8 <span style=''>import scala.concurrent.Await
+</span>9 <span style=''>import scala.concurrent.duration._
+</span>10 <span style=''>
+</span>11 <span style=''>class ValidationActor(purchaseRef: ActorRef) extends Actor with ActorLogging {
+</span>12 <span style=''>
+</span>13 <span style=''>  implicit val timeout = </span><span style='background: #AEF1AE'>Timeout(10000 seconds)</span><span style=''>
+</span>14 <span style=''>  var senderRef: Option[ActorRef] = </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>15 <span style=''>
+</span>16 <span style=''>  override def receive = {
+</span>17 <span style=''>    case customer: Customer =&gt;
+</span>18 <span style=''>
+</span>19 <span style=''>      </span><span style='background: #AEF1AE'>log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;checking handset Availability....&quot;)</span><span style=''>
+</span>20 <span style=''>      val availability = (</span><span style='background: #AEF1AE'>purchaseRef ? Checking).mapTo[Boolean]</span><span style=''>
+</span>21 <span style=''>
+</span>22 <span style=''>      if (</span><span style='background: #AEF1AE'>Await.result(availability, 10.seconds)</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>23 <span style=''></span><span style='background: #AEF1AE'>        log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Item available...Now processing for booking&quot;)
+</span>24 <span style=''></span><span style='background: #AEF1AE'>        purchaseRef ! customer
+</span>25 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>26 <span style=''>      else {
+</span>27 <span style=''>        </span><span style='background: #AEF1AE'>log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Booking Failed&quot;)</span><span style=''>
+</span>28 <span style=''>      }
+</span>29 <span style=''>  }
+</span>30 <span style=''>
+</span>31 <span style=''>}
+</span>32 <span style=''>
+</span>33 <span style=''>object ValidationActor {
+</span>34 <span style=''>
+</span>35 <span style=''>  def props(ref: ActorRef): Props = {
+</span>36 <span style=''>    </span><span style='background: #AEF1AE'>Props(classOf[ValidationActor], ref)</span><span style=''>
+</span>37 <span style=''>  }
+</span>38 <span style=''>
+</span>39 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          353
+          -
+          375
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.util.Timeout.apply
+        </td>
+        <td style="background: #AEF1AE">
+          akka.util.Timeout.apply(scala.concurrent.duration.`package`.DurationInt(10000).seconds)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          361
+          -
+          374
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.concurrent.duration.DurationConversions.seconds
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.duration.`package`.DurationInt(10000).seconds
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          361
+          -
+          366
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          10000
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          412
+          -
+          416
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          443
+          -
+          443
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          edu.knoldus.actors.ValidationActor.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          483
+          -
+          548
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;checking handset Availability....&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          575
+          -
+          586
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.actors.ValidationActor.purchaseRef
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.purchaseRef
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          587
+          -
+          587
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          587
+          -
+          587
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.actors.ValidationActor.timeout
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.timeout
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          575
+          -
+          613
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.mapTo
+        </td>
+        <td style="background: #AEF1AE">
+          akka.pattern.`package`.ask(ValidationActor.this.purchaseRef).?(edu.knoldus.models.Checking)(ValidationActor.this.timeout, ValidationActor.this.self).mapTo[Boolean]((ClassTag.Boolean: scala.reflect.ClassTag[Boolean]))
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          589
+          -
+          597
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.models.Checking
+        </td>
+        <td style="background: #AEF1AE">
+          edu.knoldus.models.Checking
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          665
+          -
+          789
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  ValidationActor.this.log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Item available...Now processing for booking&quot;);
+  akka.this.actor.`package`.actorRef2Scala(ValidationActor.this.purchaseRef).!(customer)(ValidationActor.this.self)
+}
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          652
+          -
+          662
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.concurrent.duration.DurationConversions.seconds
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.duration.`package`.DurationInt(10).seconds
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          652
+          -
+          654
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          10
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          625
+          -
+          663
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.concurrent.Await.result
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Await.result[Boolean](availability, scala.concurrent.duration.`package`.DurationInt(10).seconds)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          675
+          -
+          750
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Item available...Now processing for booking&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          759
+          -
+          770
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          edu.knoldus.actors.ValidationActor.purchaseRef
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.purchaseRef
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          759
+          -
+          781
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          akka.this.actor.`package`.actorRef2Scala(ValidationActor.this.purchaseRef).!(customer)(ValidationActor.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          771
+          -
+          771
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          811
+          -
+          857
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Booking Failed&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          811
+          -
+          857
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.LoggingAdapter.info
+        </td>
+        <td style="background: #AEF1AE">
+          ValidationActor.this.log.info(&quot;ValidationActor:&gt;&gt;&gt;&gt;Booking Failed&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          942
+          -
+          978
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Props.apply
+        </td>
+        <td style="background: #AEF1AE">
+          akka.actor.Props.apply(classOf[edu.knoldus.actors.ValidationActor], ref)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

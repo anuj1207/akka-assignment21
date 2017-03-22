@@ -1,0 +1,230 @@
+<scoverage 
+statement-count="57" statements-invoked="57" statement-rate="100.00" branch-rate="100.00" version="1.0" timestamp="1490186607022">
+    <packages>
+        <package name="edu.knoldus.actors" statement-count="57" statements-invoked="57" statement-rate="100.00">
+            <classes>
+                <class 
+                name="edu.knoldus.actors.PurchaseRequestHandler" filename="edu/knoldus/actors/PurchaseRequestHandler.scala" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="edu.knoldus.actors/PurchaseRequestHandler/receive" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="368" end="390" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="271" end="361" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="380" end="380" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="232" end="232" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="368" end="379" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="receive" start="411" end="471" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus.actors/PurchaseRequestHandler/props" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseRequestHandler" class-type="Object" full-class-name="edu.knoldus.actors.PurchaseRequestHandler" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseRequestHandler.scala" method="props" start="555" end="598" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="edu.knoldus.actors.ValidationActor" filename="edu/knoldus/actors/ValidationActor.scala" statement-count="22" statements-invoked="22" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="edu.knoldus.actors/ValidationActor/props" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Object" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="props" start="942" end="978" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus.actors/ValidationActor/&lt;none&gt;" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="&lt;none&gt;" start="353" end="375" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="&lt;none&gt;" start="361" end="374" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="&lt;none&gt;" start="361" end="366" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="&lt;none&gt;" start="412" end="416" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus.actors/ValidationActor/receive" statement-count="17" statements-invoked="17" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="759" end="770" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="575" end="586" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="665" end="789" line="22" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="587" end="587" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="443" end="443" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="652" end="662" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="652" end="654" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="811" end="857" line="27" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="675" end="750" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="483" end="548" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="759" end="781" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="587" end="587" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="811" end="857" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="575" end="613" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="625" end="663" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="589" end="597" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="ValidationActor" class-type="Class" full-class-name="edu.knoldus.actors.ValidationActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/ValidationActor.scala" method="receive" start="771" end="771" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="edu.knoldus.actors.PurchaseActor" filename="edu/knoldus/actors/PurchaseActor.scala" statement-count="28" statements-invoked="28" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="edu.knoldus.actors/PurchaseActor/receive" statement-count="27" statements-invoked="27" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="671" end="715" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="581" end="598" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="402" end="408" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="729" end="729" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="402" end="415" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="635" end="649" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="304" end="322" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="379" end="393" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="511" end="530" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="511" end="530" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="393" end="394" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="629" end="649" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="599" end="600" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="332" end="395" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="731" end="736" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="409" end="409" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="537" end="601" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="281" end="281" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="722" end="736" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="546" end="600" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="411" end="415" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="633" end="633" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="343" end="379" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="454" end="504" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="548" end="580" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="341" end="394" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="receive" start="722" end="728" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="edu.knoldus.actors/PurchaseActor/&lt;none&gt;" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="edu.knoldus.actors" class="PurchaseActor" class-type="Class" full-class-name="edu.knoldus.actors.PurchaseActor" source="/home/knoldus/workSpace/akka/akka-assignment-21/src/main/scala/edu/knoldus/actors/PurchaseActor.scala" method="&lt;none&gt;" start="253" end="254" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

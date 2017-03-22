@@ -1,0 +1,4 @@
+[0m[[0minfo[0m] [0m[32mPurchaseRequestHandlerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA purchaseRequestHandler [0m[0m
+[0m[[0minfo[0m] [0m[32m- must send request to validateActor if valid customer[0m[0m
+[0m[[0minfo[0m] [0m[32m- must log about invalid customer [0m[0m
